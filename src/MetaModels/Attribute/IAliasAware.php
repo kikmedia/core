@@ -50,7 +50,7 @@ interface IAliasAware
      *
      * @param string $format     The format for the parsing.
      *
-     * @return string The parsed string or as fallback the getAliasValue.
+     * @return array A array with the raw value and the chosen format.
      */
     public function parseAliasValue($identifier, $format = 'text');
 }

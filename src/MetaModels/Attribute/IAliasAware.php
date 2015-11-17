@@ -30,9 +30,11 @@ interface IAliasAware
     /**
      * Return the value of the alias.
      *
+     * @param int $identifier The id for the data row.
+     *
      * @return string
      */
-    public function getAliasValue();
+    public function getAliasValue($identifier);
 
     /**
      * Check if the alias field is a metamodels attribute. If so we can handel it with some more options.
@@ -44,9 +46,11 @@ interface IAliasAware
     /**
      * If the alias is a MetaModels alias parse it.
      *
-     * @param string $format The format for the parsing.
+     * @param int    $identifier The id for the data row.
+     *
+     * @param string $format     The format for the parsing.
      *
      * @return string The parsed string or as fallback the getAliasValue.
      */
-    public function parseAliasValue($format = 'text');
+    public function parseAliasValue($identifier, $format = 'text');
 }

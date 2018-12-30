@@ -437,6 +437,8 @@ class MetaModel implements IMetaModel
      *                               values.
      *
      * @return array an array of all matched items, sorted by the id list.
+     *
+     * @deprecated Since 2.1 to be removed in 3.0.
      */
     protected function fetchTranslatedAttributeValues(ITranslated $attribute, $ids)
     {
@@ -640,6 +642,8 @@ class MetaModel implements IMetaModel
 
     /**
      * {@inheritdoc}
+     *
+     * @deprecated Please implement ITranslatedMetaModel instead.
      */
     public function isTranslated(bool $deprecation = true)
     {
@@ -692,6 +696,8 @@ class MetaModel implements IMetaModel
 
     /**
      * {@inheritdoc}
+     *
+     * @deprecated Please implement ITranslatedMetaModel instead.
      */
     public function getAvailableLanguages()
     {
@@ -731,6 +737,8 @@ class MetaModel implements IMetaModel
 
     /**
      * {@inheritdoc}
+     *
+     * @deprecated Please implement ITranslatedMetaModel instead.
      */
     public function getFallbackLanguage()
     {
@@ -779,6 +787,8 @@ class MetaModel implements IMetaModel
      *
      * @SuppressWarnings(PHPMD.Superglobals)
      * @SuppressWarnings(PHPMD.CamelCaseVariableName)
+     *
+     * @deprecated Please implement ITranslatedMetaModel instead.
      */
     public function getActiveLanguage()
     {
